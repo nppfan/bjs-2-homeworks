@@ -25,6 +25,9 @@ function Student(name, gender, age) {
     for (let i = 0; i < this.marks.length; i++) {
       sum += this.marks[i];
     }
+    if (this.marks.length === 0) {
+        return 0;
+      }
     return sum / this.marks.length;
   }
   
@@ -33,3 +36,4 @@ function Student(name, gender, age) {
     delete this.marks;
     this.excluded = reason;
   }
+
