@@ -35,5 +35,6 @@ function Student(name, gender, age) {
     delete this.subject;
     delete this.marks;
     this.excluded = reason;
+    
   }
 
