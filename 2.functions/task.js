@@ -5,7 +5,7 @@ function getArrayParams(...arr) {
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
-    let avg = Number((sum / arr.length).toFixed(2));
+    let avg = Number.reduce(sum, arr.length);
     return { min: min, max: max, avg: avg };
 }
 
