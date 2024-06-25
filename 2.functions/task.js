@@ -7,7 +7,7 @@ function getArrayParams(...arr) {
     }
     let avg = Number.reduce(sum, arr.length);
     return { min: min, max: max, avg: avg };
-}
+} 
 
 function summElementsWorker(...arr) {
 	let sum = 0;
