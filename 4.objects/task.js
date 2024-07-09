@@ -3,9 +3,7 @@ function Student(name, gender, age) {
     this.gender = gender;
     this.age = age;
     this.marks = [];
-    let StudentOne = new Student(this.name, this.gender, this.age, this.marks);
-    let StudentTwo = new Student(this.name, this.gender, this.age, this.marks);
-    let StudentThree = new Student(this.name, this.gender, this.age, this.marks);
+    let Student = new Student(this.name, this.gender, this.age, this.marks);
   }
   
   
