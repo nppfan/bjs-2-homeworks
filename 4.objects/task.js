@@ -4,7 +4,7 @@ function Student(name, gender, age) {
 	this.age = age;
 	this.marks = [];
   this.addMarks = function(...marks) {
-    if (!this.marks) {
+    if (this.marks === undefined) {
         console.log('Студент отчислен');
         return;
     }
