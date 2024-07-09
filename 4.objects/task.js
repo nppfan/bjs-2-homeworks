@@ -11,11 +11,11 @@ function Student(name, gender, age) {
   }
   
   Student.prototype.addMarks = function (...marks) {
-    if (this.marks === undefined) {
-      return 0;
+    if (marks.length === 0) {
+        return 0;
     }
     this.marks.push(...marks);
-  }
+}
   
   Student.prototype.getAverage = function () {
     let sum = 0;
