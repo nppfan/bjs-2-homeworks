@@ -30,15 +30,13 @@ student2.addMarks(4, 4, 5);
 student3.addMarks(3, 3, 4);
 
 Student.prototype.getAverage = function() {
-	let sum = 0;
-	for (let i = 0; i < this.marks.length; i++) {
-		sum += this.marks[i];
-	}
-	if (this.marks.length === 0) {
-		return 0;
-	}
-	return sum / this.marks.length;
+	if (!this.marks || this.marks.length === 0) {
+    return 0;
 }
+const sum = this.marks.reduce((total, mark) => total + mark, 0);
+return sum / this.marks.length;
+}
+
 
 Student.prototype.exclude = function(reason) {
 	delete this.subject;
