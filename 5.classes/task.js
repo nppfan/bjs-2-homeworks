@@ -1,4 +1,4 @@
-class PrintEditionItem(name, releaseDate, pagesCount, state, type) {
+class PrintEditionItem {
 	constructor(name, releaseDate, pagesCount, state, type) {
 		this.name = name;
 		this.releaseDate = releaseDate;
