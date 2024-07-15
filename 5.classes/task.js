@@ -72,13 +72,13 @@ class PrintEditionItem {
       return null;
     }
     giveBookByName(bookName) {
-      for (let i = 0; i < this.books.length; i++) {
-        if (this.books[i].name === bookName) {
-          this.books.splice(i, 1);
-          return this.books[i];
+        for (let i = 0; i < this.books.length; i++) {
+            if (this.books[i].name === bookName) {
+                const removedBook = this.books[i];
+                this.books.splice(i, 1);
+                return removedBook;
+            }
         }
-      }
-      return null;
-    }
+        return null;
+    } 
   }
-  
