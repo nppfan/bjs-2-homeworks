@@ -1,17 +1,17 @@
 ﻿function parseCount(value) {
-	let parsedValue = Number.parseFloat(value);
-	if (Number.isNaN(parsedValue)) {
-		throw new Error('Невалидное значение');
-	}
-	return parsedValue;
+  let parsedValue = Number.parseFloat(value);
+  if (Number.isNaN(parsedValue)) {
+    throw new Error('Невалидное значение');
+  }
+  return parsedValue;
 }
 
 function validateCount(value) {
-	try {
-		return parseCount(value);
-	} catch (error) {
-		return error;
-	}
+  try {
+    return parseCount(value);
+  } catch (error) {
+    return error;
+  }
 }
 
 class Triangle {
@@ -33,16 +33,16 @@ class Triangle {
 }
 
 function getTriangle(a, b, c) {
-	try {
-		return new Triangle(a, b, c);
-	} catch (error) {
-		return {
-			getPerimeter() {
-				return "Ошибка! Треугольник не существует";
-			},
-			getArea() {
-				return "Ошибка! Треугольник не существует";
-			}
-		};
-	}
+  try {
+    return new Triangle(a, b, c);
+  } catch (error) {
+    return {
+      get Perimeter() {
+        return 'Ошибка! Треугольник не существует';
+      },
+      get Area() {
+        return 'Ошибка! Треугольник не существует';
+      }
+    }
+  }
 }
