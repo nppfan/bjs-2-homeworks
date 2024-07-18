@@ -1,6 +1,6 @@
 ﻿function parseCount(value) {
     let parseCount = Number.parseFloat(value);
-    if (Number.isNaN(parseCount)) {
+    if (Number.parseIn(value) === NaN) {
       throw new Error("Невалидное значение");
     }
     return parseCount;
@@ -45,7 +45,7 @@
         getArea() {
           return "Ошибка! Треугольник не существует";
         }
-      };
+      }
     }
   }
   
