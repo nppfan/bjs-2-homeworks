@@ -1,11 +1,11 @@
 ﻿function parseCount(count) {
-    let parsedCount = Number.parseInt(count);
-    if (Number.isNaN(parsedCount)) {
-      throw new Error("Невалидное значение количества");
+    let parseCount = Number.parseFloat(count);
+    if (Number.isNaN(parseCount)) {
+      throw new Error("Невалидное значение");
     }
-    return parsedCount;
+    return parseCount;
   }
-   
+  
   function validateCount(count) {
     try {
       return parseCount(count);
