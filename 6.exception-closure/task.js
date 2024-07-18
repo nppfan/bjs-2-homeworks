@@ -22,7 +22,7 @@
       if (a + b < c || a + c < b || b + c < a) {
         throw new Error("Треугольник с такими сторонами не существует");
       }
-    }
+}     
   
     getPerimeter() {
       return this.a + this.b + this.c;
