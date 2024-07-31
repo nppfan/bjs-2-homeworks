@@ -43,19 +43,20 @@ class AlarmClock {
             });
         }, 1000);
     }
+
     stop() {
-        if (this.intervalId !== null) {
-            clearInterval(this.intervalId);
-            this.intervalId = null;
-        }
+        clearInterval(this.intervalId);
+        this.intervalId = null; 
     }
+
     resetAllCalls() {
         this.alarmCollection.forEach(alarm => {
-            alarm.canCall = true;
+            alarm.canCall = true; 
         });
     }
+
     clearAlarms() {
-        this.stop();
-        this.alarmCollection = [];
+        this.stop(); 
+        this.alarmCollection = []; 
     }
 }
