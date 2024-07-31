@@ -28,16 +28,20 @@ class AlarmClock {
         return new Date().toLocaleTimeString().slice(0, 5);
     }
     start() {
-        if (this.intervalId === null) {
-            this.intervalId = setInterval(() => {
-                this.alarmCollection.forEach(item => {
-                    if (item.time === this.getCurrentFormattedTime() && item.canCall) {
-                        item.canCall = false;
-                        item.callback();
-                    }
-                });
-            }, 1000);
+        if (this.intervalId !== null) {
+            return; 
         }
+
+        this.intervalId = setInterval(() => {
+            const currentTime = new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+
+            this.alarmCollection.forEach(alarm => {
+                if (alarm.time === currentTime && alarm.canCall) {
+                    alarm.canCall = false; 
+                    alarm.callback(); 
+                }
+            });
+        }, 1000);
     }
     stop() {
         if (this.intervalId !== null) {
